@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -26,24 +27,11 @@
 
     <section id="hero" class="hero">
         <h2>Artesanías con identidad</h2>
-        <p>Encuentra productos únicos y hechos a mano</p>
-        <a href="#nuestros_productos">Explorar productos</a>
+        <p>Encuentra productos únicos y hechos a mano.</p>
+        <a href="#nuestros-productos">Explorar productos</a>
     </section>
 
     <section class="buscar" id="buscar">
-        <label for="busqueda">¿Qué artesanía buscas?</label>
-
-        <input list="lista-artesanias" placeholder="Buscar artesanías" id="busqueda" name="busqueda">
-
-        <button id="boton-buscar" type="button">Buscar</button>
-
-        <datalist id="lista-artesanias">
-            <option value="Jarrones">
-            <option value="Vasijas">
-            <option value="Cuadros">
-            <option value="Figuras decorativas">
-        </datalist>
-
         <ul id="lista-caracteristicas">
             <li>
                 <div class="contenedor-caracteristicas">
@@ -79,13 +67,12 @@
                 </div>
             </li>
         </ul>
-
     </section>
 
     <aside>
         <h2>Nuestra identidad</h2>
         <p>
-            Cada pieza artesanal cuenta una historia. En Raíces Artesanías valoramos el talento de 
+            Cada pieza artesanal cuenta una historia. En Raíces Artesanías valoramos el talento de
             nuestros artesanos, las técnicas tradicionales y la belleza de los materiales naturales.
         </p>
         <p>
@@ -94,7 +81,7 @@
         </p>
     </aside>
 
-    <main>
+    <main id="contenido-principal">
 
         <section id="nuestros-productos" class="nuestros-productos">
             <h2>Nuestros productos</h2>
@@ -103,7 +90,7 @@
                 <li class="item">
                     <article>
                         <img src="assets/productos/jarron.jpg" alt="Jarrón artesanal decorativo">
-                        <h3>Jarrón artesal</h3>
+                        <h3>Jarrón artesanal</h3>
                         <p class="descripcion-item">Jarrón decorativo con acabados naturales, ideal para salas y comedores.</p>
                         <p class="precio-item">Precio: $18.00</p>
                     </article>
@@ -149,11 +136,58 @@
                     <article>
                         <img src="assets/productos/maceta.jpg" alt="Maceta decorativa artesanal">
                         <h3>Maceta decorativa</h3>
-                        <p class="descripcion-item">Maceta artesanal para plantas pequeñas y deporación de interiores.</p>
+                        <p class="descripcion-item">Maceta artesanal para plantas pequeñas y decoración de interiores.</p>
                         <p class="precio-item">Precio: $10.00</p>
                     </article>
                 </li>
             </ul>
+        </section>
+
+        <section id="descripcion-productos">
+            <h2>Descripción de nuestros productos</h2>
+
+            <table>
+                <caption>Productos artesanales</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jarrón artesanal</td>
+                        <td>Jarrón decorativo para salas y comedores.</td>
+                        <td>Cerámica</td>
+                    </tr>
+                    <tr>
+                        <td>Vasija tradicional</td>
+                        <td>Pieza de estilo rústico.</td>
+                        <td>Cerámica</td>
+                    </tr>
+                    <tr>
+                        <td>Figura decorativa</td>
+                        <td>Figura para decorar muebles y estanterías.</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                    <tr>
+                        <td>Cuadro decorativo</td>
+                        <td>Decoración mural con diseño artesanal.</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                    <tr>
+                        <td>Centro de mesa</td>
+                        <td>Pieza decorativa para mesas.</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                    <tr>
+                        <td>Maceta decorativa</td>
+                        <td>Maceta para plantas pequeñas.</td>
+                        <td>Terracota</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section id="contacto" class="contacto">
@@ -162,17 +196,18 @@
 
             <form action="" method="get" class="formulario-contacto">
 
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" autocomplete="email" required>
 
                 <label for="celular">Celular</label>
-                <input type="tel" id="celular" name="celular">
+                <input type="tel" id="celular" name="celular" autocomplete="tel" required>
 
                 <label for="categorias-interes">Categorías de interés</label>
-                <input list="lista-categorias" placeholder="Selecciona una categoría" id="categorias-interes" name="categorias-interes">
+                <input list="lista-categorias" id="categorias-interes" name="categorias-interes"
+                    placeholder="Selecciona una categoría" required>
 
                 <datalist id="lista-categorias">
                     <option value="Jarrones">
@@ -182,7 +217,7 @@
                 </datalist>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
+                <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <button type="submit">Enviar</button>
 
