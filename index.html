@@ -192,37 +192,45 @@
         </section>
 
         <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna consulta sobre nuestras artesanías? Contáctanos.</p>
+            <div class="contacto-info">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna consulta sobre nuestras artesanías? Contáctanos.</p>
+            </div>
 
-            <form action="" method="get" class="formulario-contacto">
+            <div class="formulario-contenedor">
+                <form action="" method="get" class="formulario-contacto">
 
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
 
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
-                <label for="celular">Celular</label>
-                <input type="tel" id="celular" name="celular" autocomplete="tel" required>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
 
-                <label for="categorias-interes">Categorías de interés</label>
-                <input list="lista-categorias" id="categorias-interes" name="categorias-interes"
-                    placeholder="Selecciona una categoría" required>
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" autocomplete="tel" required>
 
-                <datalist id="lista-categorias">
-                    <option value="Jarrones">
-                    <option value="Vasijas">
-                    <option value="Cuadros">
-                    <option value="Figuras decorativas">
-                </datalist>
+                        <label for="categorias-interes">Categorías de interés</label>
+                        <input list="lista-categorias" id="categorias-interes" name="categorias-interes"
+                            placeholder="Selecciona una categoría" required>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+                        <datalist id="lista-categorias">
+                            <option value="Jarrones">
+                            <option value="Vasijas">
+                            <option value="Cuadros">
+                            <option value="Figuras decorativas">
+                        </datalist>
 
-                <button type="submit">Enviar</button>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </fieldset>
 
-            </form>
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </div>
         </section>
 
     </main>
