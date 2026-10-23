@@ -190,6 +190,7 @@ nav a:focus-visible {
     min-width: 0;
     box-sizing: border-box;
     padding: 20px;
+    padding-left: 160px;
 
 }
 
@@ -344,6 +345,7 @@ aside {
     min-width: 0;
     box-sizing: border-box;
     padding: 20px;
+    padding-right: 160px;
 
 }
 
