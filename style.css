@@ -26,7 +26,7 @@ body {
         "busqueda aside"
         "main main"
         "footer footer";
-    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
 
 }
 
@@ -187,7 +187,9 @@ nav a:focus-visible {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 25px;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 20px;
 
 }
 
@@ -268,7 +270,11 @@ nav a:focus-visible {
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 25px;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     
@@ -278,14 +284,16 @@ nav a:focus-visible {
     
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    min-width: 0;
+    flex: 1 1 180px;
 
 }
 
 #lista-caracteristicas img {
     
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 
 }
@@ -318,6 +326,8 @@ nav a:focus-visible {
 .texto-caracteristica{
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .separador-caracteristicas {
@@ -328,36 +338,39 @@ nav a:focus-visible {
 
 }
 
-main {
-
-    grid-area: main;
-    min-width: 0;
-    margin: 10px;
-
-}
-
 aside {
 
     grid-area: aside;
     min-width: 0;
     box-sizing: border-box;
-    padding: 25px;
+    padding: 20px;
 
 }
 
 aside h2 {
 
+    margin-top: 0;
     font-family: var(--fuente-titulos);
-    font-size: 26px;
-    color: var(--color-natural);
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-texto);
 
 }
 
 aside p {
 
     font-size: 16px;
+    font-family: var(--fuente-texto);
     line-height: 1.7;
     color: var(--color-texto);
+
+}
+
+main {
+
+    grid-area: main;
+    min-width: 0;
+    margin: 10px;
 
 }
 
@@ -472,7 +485,7 @@ footer {
 
     aside {
 
-        padding: 20px;
+        padding: 25px 20px;
 
     }
 
