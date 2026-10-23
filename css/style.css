@@ -63,6 +63,23 @@ nav a {
     text-decoration: none;
 }
 
+#saltar-contenido {
+    position: absolute;
+    top: 170px;
+    left: 20px;
+    background-color: var(--color-natural);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateX(-200%);
+}
+
+#saltar-contenido:focus {
+    transform: translateX(0);
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
 nav a:hover {
     border-bottom: 3px solid var(--color-texto);
 }
@@ -196,7 +213,7 @@ main {
     grid-area: main;
     min-width: 0;
     margin: 10px;
-    padding-inline: 40px;
+    padding-inline: 260px;
 }
 
 .nuestros-productos h2 {
@@ -246,6 +263,53 @@ main {
 
 .item:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+#descripcion-productos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+#descripcion-productos h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 40px;
+    margin: 0 0 20px;
+}
+
+#descripcion-productos table {
+    width: 100%;
+    background-color: white;
+    border: 2px solid var(--color-acento);
+    border-top: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#descripcion-productos caption {
+    background-color: white;
+    font-family: var(--fuente-titulos);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid var(--color-acento);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#descripcion-productos th {
+    font-family: var(--fuente-titulos);
+    font-size: 18px;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+#descripcion-productos td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
 }
 
 footer {
