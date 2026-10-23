@@ -1,10 +1,19 @@
 
 :root {
-    /* Colores */
-    --color-fondo: rgb(245, 234, 220);
-    --color-texto: rgb(116, 76, 52);
-    --color-acento: rgb(166, 93, 59);
-    --color-natural: rgb(52, 74, 61);
+   /* Fondos */
+    --color-fondo-principal: #f6eadb;
+    --color-fondo-secundario: #FFFFFF;
+    --color-fondo-alternativo: #E3D1B8;
+    --color-fondo-oscuro: #344A3D;
+
+    /* Texto */
+    --color-texto-principal: #744C34;
+    --color-texto-claro: #FFFFFF;
+
+    /* Elementos destacados */
+    --color-acento: #A65D3B;
+    --color-acento-difuminado: rgba(166, 93, 59, 0.2);
+    --color-bordes: #D6C5B2;
 
     /* Tipografía */
     --fuente-titulos: Georgia, "Times New Roman", serif;
@@ -14,8 +23,8 @@
 body {
     margin: 0;
     font-family: var(--fuente-texto);
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
     display: grid;
     grid-template-areas:
         "header header"
@@ -27,6 +36,7 @@ body {
 }
 
 header {
+    background-color: var(--color-fondo-principal);
     grid-area: header;
     display: flex;
     align-items: center;
@@ -58,7 +68,7 @@ nav ul {
 nav a {
     padding-bottom: 5px;
     font-family: var(--fuente-titulos);
-    color: var(--color-texto);
+    color: var(--color-texto-principal);
     font-weight: bold;
     text-decoration: none;
 }
@@ -67,7 +77,7 @@ nav a {
     position: absolute;
     top: 170px;
     left: 20px;
-    background-color: var(--color-natural);
+    background-color: var(--color-fondo-oscuro);
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -81,7 +91,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 3px solid var(--color-texto);
+    border-bottom: 3px solid var(--color-texto-principal);
 }
 
 .hero {
@@ -129,11 +139,8 @@ nav a:hover {
     text-decoration: none;
 }
 
-.hero a:hover {
-    background-color: var(--color-fondo);
-}
-
 .buscar {
+    background-color: var(--color-fondo-secundario);
     grid-area: busqueda;
     display: flex;
     align-items: center;
@@ -192,6 +199,7 @@ nav a:hover {
 }
 
 aside {
+    background-color: var(--color-fondo-secundario);
     grid-area: aside;
     min-width: 0;
     padding: 20px 40px 20px 20px;
@@ -265,12 +273,10 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-
 #descripcion-productos {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    margin-top: 30px;
-    overflow-x: auto;
+    margin-top: 70px;
 }
 
 #descripcion-productos h2 {
@@ -310,6 +316,83 @@ main {
     padding: 12px 15px;
     text-align: left;
     vertical-align: top;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+    margin-top: 70px;
+    align-items: center;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.contacto-info h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.contacto-info p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: var(--fuente-texto);
+}
+
+.formulario-contacto fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid var(--color-bordes);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid var(--color-acento-difuminado);
+    box-shadow: 0px 4px 10px var(--color-acento-difuminado);
+    border-radius: 10px;
+}
+
+.formulario-contacto label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario-contacto input{
+    padding: 10px;
+    border: 1px solid var(--color-acento);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-contacto button{
+    display: block;
+    align-self: center;
+    padding: 10px;
+    min-width: 200px;
+    border: 1px solid var(--color-acento);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--color-acento);
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    border-color: var(--color-fondo-oscuro);
+    background-color: var(--color-fondo-oscuro);
+    color: white;
 }
 
 footer {
