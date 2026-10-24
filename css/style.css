@@ -576,4 +576,14 @@ footer nav a{
         box-sizing: border-box;
         width: 100%;
     }
+
+    #descripcion-productos table {
+        table-layout: fixed;
+    }
+
+    #descripcion-productos th,
+    #descripcion-productos td {
+        overflow-wrap: break-word;
+        padding: 10px 8px;
+    }
 }
