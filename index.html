@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,6 +18,7 @@
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#hero">Inicio</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
                 <li><a href="#nuestros-productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -26,17 +26,17 @@
     </header>
 
     <section id="hero" class="hero">
-        <a href="#nuestros-productos" id="saltar-contenido">Saltar al contenido principal</a>
+        <a href="#contenido-principal" id="saltar-contenido">Saltar al contenido principal</a>
         <h2>Artesanías con identidad</h2>
         <p>Encuentra productos únicos y hechos a mano.</p>
         <a href="#nuestros-productos">Explorar productos</a>
     </section>
 
-    <section class="buscar" id="buscar">
+    <section class="acerca-de" id="acerca-de">
         <ul id="lista-caracteristicas">
             <li>
                 <div class="contenedor-caracteristicas">
-                    <img src="/assets/images/natural.png" alt="Materiales naturales">
+                    <img src="assets/images/natural.png" alt="Materiales naturales">
                     <div class="texto-caracteristica">
                         <h3>Materiales naturales</h3>
                         <p>Productos hechos con materiales orgánicos y sostenibles.</p>
@@ -170,17 +170,17 @@
                     <tr>
                         <td>Figura decorativa</td>
                         <td>Figura para decorar muebles y estanterías.</td>
-                        <td>Por confirmar</td>
+                        <td>Arcilla</td>
                     </tr>
                     <tr>
                         <td>Cuadro decorativo</td>
                         <td>Decoración mural con diseño artesanal.</td>
-                        <td>Por confirmar</td>
+                        <td>Madera</td>
                     </tr>
                     <tr>
                         <td>Centro de mesa</td>
                         <td>Pieza decorativa para mesas.</td>
-                        <td>Por confirmar</td>
+                        <td>Arcilla</td>
                     </tr>
                     <tr>
                         <td>Maceta decorativa</td>
@@ -210,7 +210,7 @@
                         <input type="email" id="email" name="email" autocomplete="email" required>
 
                         <label for="celular">Celular</label>
-                        <input type="tel" id="celular" name="celular" autocomplete="tel" required>
+                        <input type="tel" id="celular" name="celular" autocomplete="tel" pattern="[0-9]{9}" required>
 
                         <label for="categorias-interes">Categorías de interés</label>
                         <input list="lista-categorias" id="categorias-interes" name="categorias-interes"
@@ -236,6 +236,18 @@
     </main>
 
     <footer>
+        <h2>Raíces Artesanías</h2>
+        <p>Tradición hecha a mano</p>
+
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#nuestros-productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
         <p>&copy; 2026 Raíces Artesanías</p>
     </footer>
 
