@@ -106,7 +106,7 @@ nav a:hover {
             rgba(0, 0, 0, 0.45) 40%,
             transparent 100%
         ),
-        url("assets/resourses/hero.jpg");
+        url("/assets/resourses/hero.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
