@@ -1,64 +1,69 @@
 # Raíces Artesanías
 
+Sitio web de una tienda de artesanías desarrollado con HTML5 y CSS3 como parte de la práctica N.º 27 de la asignatura Programación y Plataformas Web.
+
+**Sitio web publicado:** [Raíces Artesanías — Vercel](https://saavedra-jonnathan-artesanias.vercel.app/)
+
 ## 1. Datos generales
 
 - **Nombre del proyecto:** Raíces Artesanías
-- **Tipo de sitio web:** Página web de una tienda de artesanías
 - **Estudiante:** Jonnathan Saavedra
 - **Asignatura:** Programación y Plataformas Web
-- **Tecnologías utilizadas:** HTML5 y CSS3
 - **Práctica:** N.º 27
+- **Temática:** Tienda de artesanías
+- **Tecnologías:** HTML5 y CSS3
 - **Breakpoint principal:** 900 px
-- **Enlace del sitio web:** Añadir la URL de GitHub Pages cuando esté publicada.
 
 ## 2. Descripción del proyecto
 
-Raíces Artesanías es una página web dedicada a presentar productos artesanales. Su objetivo es mostrar el catálogo de la tienda mediante imágenes, nombres, descripciones y precios, además de ofrecer información sobre el proyecto y un formulario de contacto.
+Raíces Artesanías es una página web dedicada a presentar productos artesanales. Su propósito es mostrar un catálogo con imágenes, nombres, descripciones y precios, además de proporcionar información sobre la tienda y un formulario de contacto.
 
-La página está construida con HTML5 para organizar el contenido y CSS3 para definir su apariencia visual, distribución y adaptación a distintos tamaños de pantalla.
+El proyecto utiliza HTML5 para estructurar el contenido y CSS3 para definir la presentación visual, la distribución de los componentes y la adaptación a diferentes tamaños de pantalla.
 
-## 3. Características del proyecto
+## 3. Características principales
 
 ### 3.1. Estructura semántica
 
-El contenido se organiza mediante secciones y elementos semánticos de HTML para facilitar la lectura y la navegación por la página.
+La página utiliza elementos semánticos de HTML para organizar el encabezado, la navegación, el contenido principal, las secciones complementarias y el pie de página.
 
 ### 3.2. Catálogo de productos
 
-El catálogo presenta productos artesanales con imágenes, nombres, descripciones y precios. Las imágenes deben contar con textos alternativos que describan su contenido.
+Incluye productos artesanales presentados mediante imágenes, nombres, descripciones y precios.
 
-### 3.3. Diseño y presentación visual
+### 3.3. Tabla de productos
 
-La presentación se define mediante CSS. La hoja de estilos organiza los componentes y aplica los colores, espacios, tipografías y distribución visual del sitio.
+Incorpora una tabla estructurada con encabezados y elementos semánticos para organizar la información de los productos.
 
-### 3.4. Diseño adaptable
+### 3.4. Formulario de contacto
 
-El diseño contempla el breakpoint principal de 900 px definido para la práctica. En pantallas pequeñas, la distribución debe reorganizarse para que el contenido se pueda consultar sin desplazamiento horizontal.
+Incluye campos etiquetados y validación nativa de HTML. El campo de celular utiliza el atributo `pattern` para restringir la entrada a nueve dígitos.
 
-### 3.5. Búsqueda y formulario
+### 3.5. Campo con datalist
 
-El proyecto incluye un campo de búsqueda con sugerencias mediante `datalist` y un formulario de contacto. `datalist` proporciona sugerencias para un campo de entrada, pero no permite por sí solo seleccionar varias opciones de manera simultánea; este requisito debe comprobarse según la consigna de la práctica.
+Implementa un campo de entrada asociado a `datalist` para proporcionar sugerencias al usuario.
 
-### 3.6. Accesibilidad
+**Nota:** `datalist` proporciona sugerencias para un campo de entrada; no permite por sí solo seleccionar varias opciones simultáneamente.
 
-Se deben comprobar los textos alternativos de las imágenes, la asociación entre etiquetas y campos del formulario, la navegación mediante teclado y la visibilidad del foco en los elementos interactivos.
+### 3.6. Diseño responsive
 
-## 4. Aspectos por verificar
+El diseño utiliza CSS Grid y Flexbox para organizar los componentes. El breakpoint principal se establece en 900 px, donde se reorganizan las áreas del diseño para adaptar la presentación a dispositivos móviles.
 
-- Validación del HTML.
-- Validación del CSS.
-- Adaptación a diferentes tamaños de pantalla, incluido un ancho de 360 px.
-- Ausencia de desplazamiento horizontal no deseado.
-- Navegación mediante teclado y foco visible.
-- Asociación correcta entre las etiquetas y los campos del formulario.
-- Funcionamiento de los enlaces y del campo con `datalist`.
-- Contraste entre los colores del texto y el fondo.
+### 3.7. Accesibilidad
+
+Se incorporan etiquetas asociadas a los campos del formulario, textos alternativos en las imágenes y un enlace para saltar al contenido principal. También se contemplan indicadores visuales de foco para la navegación mediante teclado.
+
+## 4. Requisitos personalizados de la Ficha 27
+
+- **Temática:** Tienda de artesanías.
+- **Campo especial:** Entrada asociada a `datalist`.
+- **Breakpoint principal:** 900 px.
+- **Distribución:** Uso de `grid-template-areas` en la estructura principal.
+- **Adaptación móvil:** Cambio del orden de las áreas del Grid en dispositivos móviles.
 
 ## 5. Estructura del proyecto
 
 ```text
 Saavedra-Jonnathan-Artesanias/
-├── .vscode/
 ├── assets/
 │   ├── images/
 │   ├── productos/
@@ -70,15 +75,35 @@ Saavedra-Jonnathan-Artesanias/
 │   ├── auditoria-recibida.md
 │   ├── ficha.md
 │   └── respuesta.md
-└── index.html
+├── index.html
+└── README.md
 ```
 
-Esta estructura sigue la organización mostrada para el proyecto. La carpeta `assets/` contiene los recursos visuales, `css/` contiene los estilos y `docs/` reúne la documentación y las evidencias de la práctica.
+La carpeta `assets/` contiene los recursos visuales, `css/` contiene los estilos y `docs/` reúne la documentación de la práctica, los informes de auditoría, la respuesta a los hallazgos y las evidencias.
 
-## 6. Evidencias
+## 6. Auditoría y correcciones
 
-Las capturas de las validaciones y pruebas se guardan en `docs/evidencias/`. Se recomienda que cada captura tenga un nombre descriptivo y corresponda a una comprobación efectivamente realizada.
+Como parte del laboratorio cruzado, el proyecto fue revisado por otro estudiante. A partir de la auditoría recibida, se realizaron correcciones relacionadas con:
 
-## 7. Estado del proyecto
+- La organización de las áreas del Grid en dispositivos móviles.
+- El desbordamiento horizontal en pantallas pequeñas.
+- La navegación mediante teclado y los indicadores de foco.
+- La validación del campo de celular.
+- La declaración de la familia tipográfica en CSS.
 
-El proyecto reúne la página principal, los recursos visuales y la documentación de la práctica. Para completar la revisión, se deben ejecutar las validaciones, comprobar el diseño adaptable y la accesibilidad, corregir los problemas encontrados y añadir las evidencias correspondientes.
+Las decisiones tomadas y las correcciones realizadas se documentan en `docs/respuesta.md`.
+
+## 7. Evidencias
+
+La carpeta `docs/evidencias/` contiene las capturas correspondientes a las pruebas y verificaciones realizadas durante la práctica.
+
+## 8. Publicación
+
+La página está publicada en Vercel y puede consultarse en el siguiente enlace:
+
+**[Visitar Raíces Artesanías](https://saavedra-jonnathan-artesanias.vercel.app/)**
+
+## 9. Autor
+
+**Jonnathan Saavedra**  
+Estudiante de Programación y Plataformas Web.
